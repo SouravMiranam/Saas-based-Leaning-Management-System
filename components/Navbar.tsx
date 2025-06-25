@@ -1,7 +1,10 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import NavItems from './NavItems'
+import { SignInButton,SignedIn,SignedOut,UserButton } from '@clerk/nextjs'
+import { User } from 'lucide-react'
 
 const Navbar = () => {
   return (
@@ -15,7 +18,18 @@ const Navbar = () => {
       </Link>
       <div className="flex items-centre gap-8">
         <NavItems/>
-        <p>Sign in</p>
+        <SignedOut>
+          
+            <SignInButton>
+              <button className="btn-signin">
+                Sign In
+              </button>
+            </SignInButton>
+         
+        </SignedOut>
+        <SignedIn>
+          <UserButton/>
+        </SignedIn>
 
       </div>
       </nav>

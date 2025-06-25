@@ -1,11 +1,9 @@
-import React from 'react'
-
-const CompanionsLibrary = () => {
-  return (
-    <div>
-      CompanionsLibrary
-    </div>
+const ComapnionsLibrary = async() => {
+   return (
+   <div>
+    
+   </div>
   )
 }
 
-export default CompanionsLibrary
+export default ComapnionsLibrary
