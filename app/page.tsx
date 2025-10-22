@@ -28,10 +28,11 @@ const Page = async() => {
       
       
     </section>
-    <section className='home-section'>
-    <ComapnionList title="Recently completed sessions" companions={recentsessionscompanions} classNames="w-2/3 max-lg:w-full"/>
-    <CTA/>
-
+    <section className='home-section items-stretch'>
+    <ComapnionList title="Recently completed sessions" companions={recentsessionscompanions} classNames="w-2/3 max-lg:w-full flex-1" useHorizontalScroll={true}/>
+    <div className="flex-1 flex">
+      <CTA/>
+    </div>
     </section>
     </main>
   )

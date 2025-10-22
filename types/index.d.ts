@@ -81,3 +81,49 @@ interface CompanionComponentProps {
   voice: string;
   style: string;
 }
+
+interface UploadedDocument {
+  id: string;
+  name: string;
+  content: string;
+  uploadedAt: Date;
+}
+
+interface DocumentQuery {
+  question: string;
+  documentId: string;
+}
+
+interface DocumentAnswer {
+  answer: string;
+  relevantText: string;
+  confidence: number;
+}
+
+interface QuizQuestion {
+  question: string;
+  userAnswer: string;
+  isCorrect: boolean;
+  topic: string;
+  difficulty: 'easy' | 'medium' | 'hard';
+  timestamp: Date;
+}
+
+interface AssessmentData {
+  studentName: string;
+  subject: string;
+  sessionDate: string;
+  sessionDuration: number;
+  topicsCovered: string[];
+  quizQuestions: QuizQuestion[];
+  comprehensionScore: number;
+  accuracyRate: number;
+  engagementLevel: 'High' | 'Medium' | 'Low';
+  engagementScore: number;
+  strengths: string[];
+  improvementsNeeded: string[];
+  recommendations: string[];
+  overallGrade: string;
+}
+
+export { Subject, Companion, CreateCompanion, GetAllCompanions, BuildClient, CreateUser, SearchParams, Avatar, SavedMessage, CompanionComponentProps, UploadedDocument, DocumentQuery, DocumentAnswer, QuizQuestion, AssessmentData };

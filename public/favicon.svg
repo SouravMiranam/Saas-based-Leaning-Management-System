@@ -1,0 +1,16 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="url(#gradient)"/>
+  <!-- Book icon similar to BookOpen from Lucide -->
+  <path d="M6 8C6 7.44772 6.44772 7 7 7H15C15.5523 7 16 7.44772 16 8V24C16 24.5523 15.5523 25 15 25H7C6.44772 25 6 24.5523 6 24V8Z" fill="white"/>
+  <path d="M17 8C17 7.44772 17.4477 7 18 7H25C25.5523 7 26 7.44772 26 8V24C26 24.5523 25.5523 25 25 25H18C17.4477 25 17 24.5523 17 24V8Z" fill="white"/>
+  <path d="M16 10H17" stroke="url(#gradient)" stroke-width="1"/>
+  <path d="M16 13H17" stroke="url(#gradient)" stroke-width="1"/>
+  <path d="M16 16H17" stroke="url(#gradient)" stroke-width="1"/>
+  <path d="M16 19H17" stroke="url(#gradient)" stroke-width="1"/>
+  <defs>
+    <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+</svg>
