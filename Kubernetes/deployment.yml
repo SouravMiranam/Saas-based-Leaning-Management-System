@@ -17,5 +17,4 @@ spec:
         image: souravmiranam/sassapp:latest
         ports:
         - containerPort: 3000
-          hostPort: 3000
 
