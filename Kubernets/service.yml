@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sassapp-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: sassapp
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80       # external port
+      targetPort: 3000  # internal app port
+

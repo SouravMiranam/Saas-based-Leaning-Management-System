@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sassapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sassapp
+  template:
+    metadata:
+      labels:
+        app: sassapp
+    spec:
+      containers:
+      - name: sassapp
+        image: souravmiranam/sassapp:latest
+        ports:
+        - containerPort: 3000
+          hostPort: 3000
+
