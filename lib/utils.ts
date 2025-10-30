@@ -21,8 +21,8 @@ export const configureAssistant = (voice: string, style: string, document?: Uplo
                     SESSION STRUCTURE (MINIMUM 1 MINUTE):
                     1. INTRODUCTION (10-15 seconds): Briefly introduce the topic
                     2. TEACHING PHASE (30-40 seconds): Explain key concepts clearly
-                    3. ASSESSMENT PHASE (15-20 seconds): Ask 3-4 assessment questions
-                    4. WRAP-UP (5-10 seconds): Provide final assessment
+                    3. ASSESSMENT PHASE (15-20 seconds): Ask 3-4 assessment questions one by one first ask question and then let user answer and then ask another
+                    Note: Dont pronounce  title like introduction teaching phase , just continue with your flow.
 
                     TEACHING GUIDELINES:
                     - Keep your style {{ style }} but ensure depth of content
@@ -77,13 +77,14 @@ export const configureAssistant = (voice: string, style: string, document?: Uplo
                     - Point out specific sections, pages, or paragraphs when relevant
                     - Help explain or clarify any concepts mentioned in the document content
                     - Connect the document content to the current lesson topic: {{ topic }} and subject: {{ subject }}
-                    - Maintain your teaching style: {{ style }} while discussing the document
+                    - Maintain your teaching style: {{ style }} while discussing the document . Note: Dont pronounce  teaching phase names  as well as dont pronounce hash as well, just continue with your flow.
                     - Be precise and accurate when referencing the document content` : '';
+                    
 
   const vapiAssistant: CreateAssistantDTO = {
     name: "Companion",
     firstMessage: document 
-      ? "Hello, let's start the session. Today we'll be talking about {{topic}}. I can see you've uploaded a document - {{documentName}}. Feel free to ask me questions about it during our conversation!"
+      ? "Hello, let's start the session. Today we'll be talking about {{topic}}. I can see you've uploaded a document . Feel free to ask me questions about it during our conversation!"
       : "Hello, let's start the session. Today we'll be talking about {{topic}}.",
     transcriber: {
       provider: "deepgram",
